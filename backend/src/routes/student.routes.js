@@ -1,17 +1,3 @@
-// // src/routes/student.routes.js
-// const express = require('express');
-// const router = express.Router();
-// const auth = require('../middlewares/auth.middleware');
-// const { permit } = require('../middlewares/role.middleware');
-// const student = require('../controllers/student.controller');
-
-// router.use(auth); // allow different roles but protect endpoints
-
-// router.get('/courses', permit('student','instructor','admin'), student.listCourses);
-// router.post('/course/:courseId/enroll', permit('student'), student.enroll);
-// router.get('/course/:courseId/media', permit('student','instructor','admin'), student.getCourseMedia);
-
-// module.exports = router;
 
 // src/routes/student.routes.js
 const express = require('express');

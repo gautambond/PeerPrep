@@ -28,41 +28,6 @@ exports.listInstructors = async (req, res) => {
   }
 };
 
-// exports.deleteMedia = async (req, res) => {
-//   try {
-//     console.log("REQUEST TO DELETE:", req.params.id);
-
-//     const media = await Media.findById(req.params.id);
-
-//     if (!media) {
-//       console.log("MEDIA NOT FOUND");
-//       return res.status(404).json({ message: "Media not found" });
-//     }
-
-//     console.log("MEDIA FOUND:", media);
-
-//     // DELETE FROM CLOUDINARY
-//     console.log("Deleting from Cloudinary:", media.publicId, media.type);
-
-//     const result = await cloudinary.uploader.destroy(media.publicId, {
-//       resource_type: media.type === "video" ? "video" : "image",
-//     });
-
-//     console.log("Cloudinary Response:", result);
-
-//     // If Cloudinary returns 'not found' or 'error'
-//     if (result.result !== "ok" && result.result !== "not found") {
-//       return res.status(500).json({ message: "Cloudinary delete failed", result });
-//     }
-
-//     await media.deleteOne();
-
-//     res.json({ message: "Deleted successfully", result });
-//   } catch (err) {
-//     console.error("DELETE ERROR:", err);
-//     res.status(500).json({ message: "Delete failed", error: err.message });
-//   }
-// };
 
 exports.getAllUsers = async (req, res) => {
   try {
